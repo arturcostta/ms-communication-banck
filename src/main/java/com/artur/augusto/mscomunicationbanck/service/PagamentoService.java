@@ -2,6 +2,7 @@ package com.artur.augusto.mscomunicationbanck.service;
 
 import com.artur.augusto.mscomunicationbanck.domain.Pagamento;
 import com.artur.augusto.mscomunicationbanck.json.PagamentoJson;
+import com.artur.augusto.mscomunicationbanck.repository.PagamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,7 @@ public class PagamentoService {
         pagamento.setCartao(cartaoService.getCartao(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNroCartao()));
 
         pagamentoRepository.save(pagamento);
+
         cartaoService.atualizarSaldo(pagamentoJson.getCodigoSegurancaCartao(), pagamentoJson.getNroCartao(), pagamentoJson.getValorCompra());
     }
 }

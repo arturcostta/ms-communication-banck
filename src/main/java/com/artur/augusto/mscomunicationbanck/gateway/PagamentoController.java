@@ -1,6 +1,7 @@
 package com.artur.augusto.mscomunicationbanck.gateway;
 
 import com.artur.augusto.mscomunicationbanck.json.PagamentoJson;
+import com.artur.augusto.mscomunicationbanck.json.RetornoJson;
 import com.artur.augusto.mscomunicationbanck.service.PagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
